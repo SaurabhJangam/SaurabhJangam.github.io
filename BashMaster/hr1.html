@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<style>
+    .card{
+        font-family: 'Times New Roman', Times, serif;
+    }
+</style>
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">BashMaster</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page2.html">Commands</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Practice
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://www.onlinegdb.com/online_bash_shell"
+                            target="_blank">Online Bash</a>
+                        <a class="dropdown-item" href="#">HackerRank solutions</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Tcs Xplore Unix Que</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="card ">
+        <div class="card-header text-center bg-danger text-dark ">
+            <h3>awk command </h3>
+        </div>
+        <div class="card-body text-justify ">
+            Awk is a scripting language used for manipulating data and generating reports.The awk command programming
+            language requires no compiling, and allows the user to use variables, numeric functions, string functions,
+            and logical operators.
+            <br>
+            Awk is a utility that enables a programmer to write tiny but effective programs in the form of statements
+            that define text patterns that are to be searched for in each line of a document and the action that is to
+            be taken when a match is found within a line. Awk is mostly used for pattern scanning and processing. It
+            searches one or more files to see if they contain lines that matches with the specified patterns and then
+            performs the associated actions.
+            <br>
+            Awk is abbreviated from the names of the developers – Aho, Weinberger, and Kernighan.
+            <br>
+            <p><strong>1. AWK Operations:</strong><br>
+                (a) Scans a file line by line<br>
+                (b) Splits each input line into fields<br>
+                (c) Compares input line/fields to pattern<br>
+                (d) Performs action(s) on matched lines</p>
+
+            <p><strong>2. Useful For:</strong><br>
+                (a) Transform data files<br>
+                (b) Produce formatted reports</p>
+
+            <p><strong>3. Programming Constructs:</strong><br>
+                (a) Format output lines<br>
+                (b) Arithmetic and string operations<br>
+                (c) Conditionals and loops</p>
+
+
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <b>Syntax: <br> awk options 'selection _criteria {action }' input-file </b>
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <pre>-f program-file : Reads the AWK program source from the file 
+                        program-file, instead of from the 
+                        first command line argument.
+      -F fs            : Use fs for the input field separator
+      </pre>
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingtwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
+                                    <b>Default behavior of Awk : By default Awk prints every line of data from the
+                                        specified file. </b>
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapsetwo" class="collapse show" aria-labelledby="headingtwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                $ awk '{print}' employee.txt
+                                <p><strong>Output:</strong></p>
+                                <pre>
+                                    ajay manager account 45000
+                                    sunil clerk account 25000
+                                    varun manager sales 50000
+                                    amit manager account 47000
+                                    tarun peon sales 15000
+                                    deepak clerk sales 23000
+                                    sunil peon sales 13000
+                                    satvik director purchase 80000 </pre>
+                                <p>In the above example, no pattern is given. So the actions are applicable to all the
+                                    lines. Action print without any argument prints the whole line by default, so it
+                                    prints all the lines of the file without failure. </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+                <div class="card-footer text-muted bg-danger">
+                    2 days ago
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <!-- Footer -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">BashMaster</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">© 2020 SJWEB <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.instagram.com/saurabh.jangam/" target="_blank">
+                                —@saurabh.jangam</a>
+
+
+                    </ul>
+
+                </div>
+            </nav>
+
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+                integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+                crossorigin="anonymous"></script>
+</body>
+
+</html>
